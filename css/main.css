@@ -192,6 +192,7 @@ section.event {
 
 .text-block {
 	color: #000;
+	max-width: 390px;
 }
 
 .text-block > p, .expectations {
