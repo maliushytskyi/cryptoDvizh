@@ -44,6 +44,21 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
+h2 {
+	font-family: "Rubik One Regular";
+	font-size: 50px;
+}
+
+h3 {
+	font-family: "Rubik One Regular";
+	font-size: 35px;
+}
+
+h4 {
+	font-family: "Rubik One Regular";
+	font-size: 21px;
+}
+
 a {
 	text-decoration: none;
 }
@@ -73,6 +88,12 @@ p {
 	padding: 17px 57px;
 	width: 226px;
 	margin: 0 auto;
+	background: #ffffff00;
+    backdrop-filter: blur(5px);
+}
+
+.bold-text {
+	font-weight: 700;
 }
 
 /* --- HEADER SECTION --- */
@@ -117,36 +138,36 @@ p {
 	font-family: "Bebas Neue", sans-serif;
 	text-align: center;
 	margin: 0 auto 90px;
+	width: 390px;
 }
 
-.main-title:before {
-	content: "";
-    display: block;
-    font-family: "Bebas Neue", sans-serif;
-    position: absolute;
-    z-index: -2;
-    background: url(../img/crypto.png) no-repeat center;
-    background-size: contain;
-    max-width: 390px;
-    height: 150px;
-    margin: 20px auto 0;
-    left: 10px;
-    right: 10px;
-}
-
-/*.main-title h1 {
+h1 {
+	color: white;
 	font-size: 170px;
+	position: relative;
+	z-index: -2;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: linear-gradient(to bottom, #ffffff, #dcdcdc);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+    /* Ефект внутрішньої тіні через псевдоелемент */
+h1::after {
+	content: 'CRYPTO';
 	position: absolute;
-	z-index: 0;
-	text-shadow: 0 0 5px rgba(0, 0, 0, 0.4),
-        0 0 10px rgba(0, 0, 0, 0.3),
-        0 0 15px rgba(255, 255, 255, 0.5),
-        0 0 20px rgba(0, 0, 0, 0.3);
-}*/
+	top: 0;
+	left: 0;
+	color: transparent;
+	-webkit-text-stroke: 1px rgba(0, 0, 0, 0.3); /* внутрішня лінія */
+	filter: blur(1px);
+	z-index: -1;
+}
 
 .main-title p {
 	font-size: 100px;
-	padding-top: 150px;
 }
 
 
@@ -219,6 +240,7 @@ section.event {
 	color: #000;
 	max-width: 390px;
     margin: 0 auto;
+    font-size: 16px;
 }
 
 .text-block > p, .expectations {
@@ -232,9 +254,7 @@ p .highlight-text {
 	
 }
 
-.expectations .bold-text {
-	font-weight: 700;
-}
+
 
 /* --- SPEAKERS SECTION --- */
 
@@ -328,10 +348,11 @@ p .highlight-text {
 }
 
 .ticket-type {
-	background: #3D3D3D;
+	background: #000;
 	border-radius: 10px;
 	padding-bottom: 10px;
-	border-bottom: 1px dashed #000;
+	border: 1px solid #FFD700;
+	box-shadow: 1px 1px 10px #FFD700;
 }
 
 .ticket-barcode {
@@ -354,7 +375,9 @@ p .highlight-text {
 
 .ticket-desc {
 	padding: 20px 20px 30px;
-	background: linear-gradient(180deg, rgba(61,61,61,1) 70%, rgb(176, 148, 2) 100%);
+	background: url(../img/ticket-bg.png) no-repeat center / cover;
+	border: 1px solid #FFD700;
+	box-shadow: 1px 1px 10px #FFD700;
 	border-radius: 10px;
 }
 
@@ -376,22 +399,19 @@ p .highlight-text {
 }
 
 .buy-btn {
-	background: #3D3D3D;
-	font-size: 48px;
-	font-family: "Rubik One Regular";
-	padding: 9px 18px;
-	width: 250px;
-	margin-top: 5px;
+	background: #000;
+	font-size: 40px;
+    font-family: "Rubik One Regular";
+    padding: 5px 27px;
+    width: 230px;
+    margin-top: 5px;
 	transition: all 0.5s ease;
 }
 
 .buy-btn:hover {
-	background: #FFD519;
+	background: transparent;
 }
 
-.ticket-desc_vip {
-	background: linear-gradient(180deg, rgba(61,61,61,1) 20%, rgb(176, 148, 2) 100%);
-}
 
 /* --- AGENDA SECTION --- */
 
@@ -446,5 +466,60 @@ p .highlight-text {
 	font-family: "Rubik One Regular";
 	font-size: 35px;
 	margin-bottom: 10px;
+}
+
+.footer {
+	background: #FFD700;
+	padding: 20px 0;
+}
+
+.coop {
+	color: #000;
+	display: block;
+	max-width: 390px;
+	margin: 0 auto;
+}
+
+.coop-item {
+	font-size: 12px;
+	width: 335px;
+	font-style: italic;
+}
+
+.coop-item:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.coop-item:nth-child(2) {
+	width: 380px;
+}
+
+.coop-item .small-text {
+	font-size: 10px;
+}
+
+.coop-item h4 {
+	font-style: normal;
+}
+
+.subtitle {
+	font-size: 12px;
+}
+
+.social-media {
+	width: 390px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.social-link {
+	display: block;
+	margin-left: 20px;
+}
+
+.social-img {
+	width: 50px;
+	height: 50px;
 }
 
