@@ -485,7 +485,7 @@ p .highlight-text {
 
 .coop-item {
 	font-size: 12px;
-	width: 335px;
+	max-width: 335px;
 	font-style: italic;
 }
 
@@ -494,7 +494,7 @@ p .highlight-text {
 }
 
 .coop-item:nth-child(2) {
-	width: 380px;
+	max-width: 380px;
 }
 
 .coop-item .small-text {
