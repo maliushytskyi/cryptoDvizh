@@ -511,6 +511,7 @@ p .highlight-text {
 
 .social-media {
 	width: 390px;
+	margin: 0 auto;
 	padding-right: 60px;
 	display: flex;
 	justify-content: flex-end;
