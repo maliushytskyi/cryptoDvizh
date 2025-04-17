@@ -139,11 +139,12 @@ p {
 	font-family: "Bebas Neue", sans-serif;
 	text-align: center;
 	margin: 0 auto 90px;
+	max-width: 390px;
 }
 
 h1 {
 	color: white;
-	font-size: 175px;
+	font-size: 170px;
 	position: relative;
 	z-index: -2;
 	left: 0;
