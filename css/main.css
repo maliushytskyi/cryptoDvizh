@@ -516,6 +516,7 @@ p .highlight-text {
 	margin: 0 auto ;
 	display: flex;
 	justify-content: flex-end;
+	position: relative;
 }
 
 .social-link {
@@ -526,6 +527,19 @@ p .highlight-text {
 .social-img {
 	width: 50px;
 	height: 50px;
+}
+
+.developer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #000;
+}
+
+.developer a {
+	color: #000;
+	text-decoration: underline;
+	font-weight: 600;
 }
 
 @media (max-width: 430px) {
