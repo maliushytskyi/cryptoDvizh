@@ -127,19 +127,18 @@ p {
 	text-align: center;
 }
 
-.details {
-	font-size: 21px;
-	display: flex;
-	justify-content: space-between;
-	max-width: 390px;
-	margin: 0 auto;
-}
-
 .main-title {
 	font-family: "Bebas Neue", sans-serif;
 	text-align: center;
 	margin: 0 auto 90px;
-	max-width: 390px;
+	max-width: 394px;
+}
+
+.details {
+	display: flex;
+	justify-content: space-between;
+	
+	margin: 0 auto;
 }
 
 h1 {
@@ -174,6 +173,10 @@ h1::after {
 	font-size: 100px;
 }
 
+.details p {
+	font-family: "Rubik One Regular";
+	font-size: 21px;
+}
 
 .black-line {
 	background: #000;
